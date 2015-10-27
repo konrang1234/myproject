@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/themes/default/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).on("mobileinit",function(){
+                $.mobile.defaultPageTransition="flow";
+            });
+        </script>
+        
+        <script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <link href="css/app.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <!----------- HOME -------------- -->
+        
+        <div data-role="page" id="home" data-title="Home" class="bg-main">
+            <div data-role="header" data-position="fixed"> <!-- data-fullscreen="true" -->
+                <h1>:: WELCOME ::</h1>
+            </div>
+            <div data-role="content" align="center">
+                <img src="image/baac.png" alt="" width="150" height="150" /><br>
+                <a href="#menu" data-role="button" data-transition="flow" data-icon="bars" data-iconpos="right"> <!--data-inline="true"-->เมนูหลัก</a>
+                <a href="#login" data-role="button" data-transition="flow" data-icon="bars" data-iconpos="right"> <!--data-inline="true"-->LOGIN</a>
+                <a href="#regis1" data-role="button" data-transition="flow" data-icon="bars" data-iconpos="right"> <!--data-inline="true"-->REGISTER</a>
+                <a href="http://127.0.0.1/myproject/public_html/test.php" data-role="button" rel="external"> <!--data-inline="true"-->NEW MEMBER</a>
+                <a href="#list" data-role="button" rel="internal"> <!--data-inline="true"-->LIST</a>
+                <!--<a href="#menu" data-role="button" data-transition="flow" data-icon="bars" data-iconpos="notext">เมนูหลัก</a>-->
+                <!--<a href="#menu"><p>:: เข้าสู่ MENU หลัก ::</p></a> -->
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <a href="#about" data-role="button" data-icon="tags" class="ui-btn-right">AboutUs</a>
+                <h1>Copyright 2015 - ITBAAC</h1>
+            </div>
+        </div>
+        
+        <!----------- MENU -------------- -->
+        
+            <div data-role="page" id="menu" data-title="MENU">
+            <div data-role="header"  data-add-back-btn="true" data-add-back-btn-text="กลับ">
+                <h1>:: MAIN MENU ::</h1>
+                <!--<a href="" data-role="button" data-rel="back">Back</a> -->
+                <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+            </div>
+            <div data-role="content">
+                
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"></div>
+                    <div class="ui-block-b">          
+                <!--<img src="image/baac.png" alt="" width="150" height="150" /><br> -->
+                <div data-role="controlgroup" class="ui-block-a" > <!--data-type="horizontal" data-mini="true" -->
+                <a href="baac.html" data-role="button" data-icon="bars" data-iconpos="left">::สารสนเทศด้านเงินกู้::</a>
+                <a href="#navbar" data-role="button" data-icon="bars" data-iconpos="left">::สารสนเทศด้านเงินฝาก::</a>
+                <a href="" data-role="button" data-icon="bars" data-iconpos="left">::สารสนเทศค่าธรรมเนียม::</a>
+                <a href="#frm_input" data-role="button" data-icon="bars" data-iconpos="left">เมนูแบบ Form</a>
+                </div>
+                    </div>
+                </div>
+                    
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Copyright 2015 - ITBAAC</h1>
+            </div>
+        </div>
+        
+        <section data-role="page" id="frm_input">
+            <header data-role="header">
+                <h1>FORM</h1>
+            </header>
+            <div data-role="content">
+                <form id="frm1">
+                    <div class="ui-field-contain">
+                        <label for="txt-name">Name: </label>
+                        <input type="text" id="txt-name">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-name">Password: </label>
+                        <input type="password" id="txt-pwd">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-email">E-mail: </label>
+                        <input type="email" id="txt-email">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-url">URL: </label>
+                        <input type="url" id="txt-url">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-tel">PHONE: </label>
+                        <input type="tel" id="txt-tel" maxlength="10">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-num">Number: </label>
+                        <input type="number" max="100" min="20" id="txt-num">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-date">Date: </label>
+                        <input type="date" id="txt-date">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-time">Time: </label>
+                        <input type="time" id="txt-time">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-dtime">Date @ Time: </label>
+                        <input type="datetime" id="txt-dtime">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-week">Week: </label>
+                        <input type="week" id="txt-week">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-month">Month: </label>
+                        <input type="month" id="txt-month">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-remark">Remark: </label>
+                        <textarea id="txt-remark"></textarea>
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-search">Search: </label>
+                        <input type="search" id="txt-search">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-range">Range: </label>
+                        <input type="range" id="txt-range" min="10" max="50" step="5">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        <label for="rd1">Bkk.</label>
+                        <input type="radio" name="rd-prv" id="rd1">
+                        <label for="rd2">Non.</label>
+                        <input type="radio" name="rd-prv" id="rd2">
+                        </fieldset>
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        <label for="ck1">Bkk.</label>
+                        <input type="checkbox" name="ck-prv" id="ck1">
+                        <label for="ck2">Non.</label>
+                        <input type="checkbox" name="ck-prv" id="ck2">
+                        </fieldset>
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="sell">จังหวัด</label>
+                        <select id="sell" data-native-menu="false" multiple="multiple">
+                            <option value="1">Bkk.</option>
+                            <option value="2">Non.</option>
+                            <option value="3">Chon.</option>
+                        </select>
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-color">สี</label>
+                        <input type="color" id="txt-color">
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </section>
+        
+        
+        
+        <!----------- ABOUT -------------- -->
+        
+                <div data-role="dialog" id="about" data-title="Home" class="bg-main">
+            <div data-role="header" data-position="fixed">
+                <h1>:: ABOUT US ::</h1>
+                
+                <a href="" data-icon="delete" data-iconpos="notext" data-rel="back">Back</a> 
+                <a href="#home" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+            </div>
+            <div data-role="content" >
+                <div align="center">
+                    <img src="image/images.png" alt=""/><br>
+                </div>
+                <div align="left">
+                - ฝ่ายปฎิบัติการเทคโนโลยีสารสนเทศ <br>
+                - ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร<br>
+                - 2346 ถนนพหลโยธิน  แขวงเสนานิคม  เขตจตุจักร กรุงเทพมหานคร  10900 <br>
+                - โทร. 025586100  ต่อ  8521 - 22 
+                โทรสาร 025586310 <br>
+                - e-mail  : lawbaacthailand@gmail.com<br>
+                - อีเมลนี้จะถูกป้องกันจากสแปมบอท แต่คุณต้องเปิดการใช้งานจาวาสคริปก่อน 
+                </div>
+                <div>
+                    <p>Detail : <a data-rel="popup" href="#pop1">BAAC</a></p>
+                </div>
+                <div data-role="popup" id="pop1">
+                    <div data-role="header">
+                        <h1>ธกส.</h1>
+                        <a data-icon="delete" data-iconpos="notext" data-rel="back" class="ui-btn-right"></a>
+                    </div>
+                    
+                    <div data-role="content">
+                        <p>ธนาคารเพื่อการเกษตรและสหกร์การเกษตร.</p>
+                        <img src="image/hot2.jpg" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <a data-role="button" data-icon="tags" class="ui-btn-right">AboutUs</a>
+                <h1>Copyright 2015 - ITBAAC</h1>
+            </div>
+        </div>
+        
+         <!----------- NAVBAR -------------- -->
+        
+                <div data-role="page" id="navbar" data-title="Home" class="bg-main">
+            <div data-role="header" data-position="fixed">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a>Page A</a></li>
+                            <li><a>Page B</a></li>
+                            <li><a>Page C</a></li>
+                        </ul>
+                    </div>
+            </div>
+            <div data-role="content" >
+                
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a data-role="button">A</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button">B</a>
+                    </div>
+                </div>
+                
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <a data-role="button">A</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button">B</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button">C</a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                <div data-role="tabs">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="#tab1">Tab #1</a></li>
+                            <li><a href="#tab2">Tab #2</a></li>
+                            <li><a href="tab3.html">Tab #3</a></li>
+                        </ul>
+                    </div>
+                    <div id="tab1">
+                        <div class="ui-coner-all custom-corners">
+                            <div class="ui-bar ui-bar-b">
+                            <h3>Group3</h3>
+                            </div>
+                            <div class="ui-body ui-body-a">
+                            <p>aaaaaaa</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="ui-bar ui-bar-b ui-corner-all">Tab#1 Content</h3>
+                        <div class="ui-body ui-body-a ui-corner-all">
+                        <p>123456789</p>
+                        </div>
+                    </div>
+                    <div id="tab2">
+                        <p>ABCDEFG</p>
+                        <img src="image/hot2.jpg" alt=""/>
+                    </div>
+                </div>
+                
+                <div data-role="collapsible-set" data-insert="false">
+                <div data-role="collapsible" data-collapsed="false" data-collapsed-icon="arrow-r" 
+                     data-expanded-icon="arrow-l" data-iconpos="right">
+                    <h1>Heading #1</h1>
+                    <p>Detail #1</p>
+                </div>
+                <div data-role="collapsible">
+                    <h1>Heading #2</h1>
+                    <!--<p>Detail #2</p> -->
+                    <div data-role="collapsible">
+                        <h1>Heading #2.1</h1>
+                        <p>Detail #2.1</p>
+                    </div>
+                </div>     
+                </div>    
+                
+                
+                
+                <div align="center">
+                    <div data-role="navbar" data-grid="d" data-iconpos="notext">
+                        <ul>
+                            <li><a data-icon="clock" >Page 1</a></li>
+                            <li><a data-icon="clock" >Page 2</a></li>
+                            <li><a data-icon="clock" >Page 3</a></li>
+                            <li><a data-icon="clock" >Page 4</a></li>
+                            <li><a data-icon="clock" >Page 5</a></li>
+                            <li><a data-icon="clock" >Page 6</a></li>                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Copyright 2015 - ITBAAC</h1>
+            </div>
+        </div>       
+         
+         
+         <!----------- LOGIN -------------- -->
+         
+         <div data-role="page" id="login" data-title="LOGIN">
+            <div data-role="header"  data-add-back-btn="true" data-add-back-btn-text="กลับ">
+                <h1>:: LOGIN ::</h1>
+                <!--<a href="" data-role="button" data-rel="back">Back</a> -->
+                <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+            </div>
+            <div data-role="content">
+              
+                <form id="frm1">
+                    <div class="ui-field-contain">
+                        <label for="txt-name">Name: </label>
+                        <input type="text" id="txt-name" placeholder="กรุณากรอกชื่อ" data-clear-btn="true" data-mini="true">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-name">Password: </label>
+                        <input type="password" id="txt-pwd" placeholder="กรุณากรอกรหัสผ่าน" data-clear-btn="true" data-mini="true">
+                    </div>
+                    
+                    <div>
+                        <a href="baac.html" data-role="button">SUBMIT</a>
+                    </div>
+                
+                
+                </form>
+                    
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Copyright 2015 - ITBAAC</h1>
+            </div>            
+         </div>
+         
+                  <!----------- LOGIN -------------- -->
+         
+         <div data-role="page" id="regis1" data-title="LOGIN">
+            <div data-role="header"  data-add-back-btn="true" data-add-back-btn-text="กลับ">
+                <h1>:: REGISTER ::</h1>
+                <!--<a href="" data-role="button" data-rel="back">Back</a> -->
+                <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+            </div>
+            <div data-role="content">
+              
+                <form id="frm1">
+                    <div class="ui-field-contain">
+                        <label for="txt-name">Name: </label>
+                        <input type="text" id="txt-name" placeholder="กรุณากรอกชื่อ" data-clear-btn="true" data-mini="true">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-name">Password: </label>
+                        <input type="password" id="txt-pwd" placeholder="กรุณากรอกรหัสผ่าน" data-clear-btn="true" data-mini="true">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-email">E-mail: </label>
+                        <input type="email" id="txt-email" placeholder="กรุณากรอกอีเมลล์" data-clear-btn="true" data-mini="true">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-name">Sex: </label>
+                        <fieldset data-role="controlgroup">
+                        <label for="rgrd1">Male.</label>
+                        <input type="radio" name="rgrd-prv" id="rgrd1">
+                        <label for="rgrd2">Female.</label>
+                        <input type="radio" name="rgrd-prv" id="rgrd2">
+                        </fieldset>
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                        <label for="txt-address">ที่อยู่: </label>
+                        <input type="text" id="txt-address" placeholder="กรุณากรอกที่อยู่" data-clear-btn="true" data-mini="true">
+                    </div>
+                    
+                    <div>
+                        <a href="baac.html" data-role="button">SUBMIT</a>
+                    </div>
+                
+                
+                </form>
+                    
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Copyright 2015 - ITBAAC</h1>
+            </div>            
+         </div>
+                  
+                  <!-------------------------LIST---------------------->
+                  <section data-rolw="page" id="list">
+                      <header data-role="header" data-theme="a">
+                          <h2>LIST</h2>
+                      </header>
+                      <div data-role="content">
+                          
+                          <ul data-role="listview" data-inset="true" id="lv1">
+                              <li><a>hello</a></li>
+                          </ul>
+                          
+                          <form class="ui-filterable">
+                          <input id="autoc-input" type="search">
+                          </form>
+                          <ul data-role="listview" data-filter="true" data-reveal="true" data-input="#autoc-input" data-inset="true">
+                              <li><a>กทม.</a></li>
+                              <li><a>นนทบุรี.</a></li>
+                              <li><a>เลย.</a></li>
+                              <li><a>กระบี่.</a></li>
+                              <li><a>นครนายก.</a></li>
+                              <li><a>น่าน.</a></li>
+                          </ul>
+                          
+                          <div data-role="collapsible-set">
+                          <div data-role="collapsible">
+                              <h2>List</h2>
+                          <ul data-role="listview" data-inset="false" data-autodividers="true">
+                              <li data-icon="forward"><a href="">A</a></li>
+                              <li data-role="list-divider">---------</li>
+                              <li><a>B</a></li>
+                              <li data-icon="false"><a>C</a></li>
+                          </ul>
+                          </div>
+                          <div data-role="collapsible">
+                              <h2>List</h2>
+                          <ol data-role="listview" data-split-icon="plus" data-filter="true" data-filter-placeholder="Baac word">
+                              <li data-filtertext="1">
+                                  <a href="">
+                                      <img src="image/images (1).jpg" alt="" width="80" height="80"/>
+                                      <h2>ULTRA-MAN</h2>
+                                      <p>atk:10,000 | def:2,000</p>
+                                      
+                                  </a>
+                                  <a href=""></a>
+                              </li>
+                              <li data-filtertext="2">
+                                  <a href="">
+                                      <img src="image/images (2).jpg" alt="" width="80" height="80"/>
+                                      <h2>DORAEMON</h2>
+                                      <p>atk:9,000 | def:2,500</p>
+                                      
+                                  </a>
+                                  <a href=""></a>
+                              </li>
+                              <li data-filtertext="3 4 5 6">
+                                  <a href="">
+                                      <img src="image/images (3).jpg" alt="" width="80" height="80"/>
+                                      <h2>CHINJUNG</h2>
+                                      <p>atk:12,500 | def:7,000</p>
+                                      
+                                  </a>
+                                  <a href=""></a>
+                              </li>
+                          </ol>
+                          </div>
+                          </div>    
+                      </div>
+                  </section>
+                  
+                  <script type="text/javascript">
+                      var BService_url="http://172.18.27.10/myporject_webservice/register_list.php";
+                      
+                      $("#list").on("pageinit",function(){
+                         $("#lv1 li").remove(); 
+                      });
+                      
+                      $("#list").on("pagebeforeshow",function(){
+                         $.getJSON(BService_url,function(data){
+                             $("#lv1 li").remove();
+                             branchs=data.items;
+                             $.each(branchs,function (index,branch){
+                                 $("#lv1").append("<li data-icon='home'><a>"+branch.reg_name+branch.reg_pass+"</a></li>");
+                             });
+                             
+                             $("#lv1").listview("refresh");
+                             
+                             });
+                         });
+                      
+                  </script>
+             
+                  <!--
+                  <script type="text/javascript">
+                      $(document).on("pageinit","#home",function(){
+                          alert("Home init");
+                      });
+                      $(document).on("pagebeforeshow","#home",function(){
+                          alert("Home beforeShow") ;
+                      });                      
+                      $(document).on("pageshow","#home",function(){
+                          alert("Home Show") ;
+                      });
+                      
+                      $(document).on("pageinit","#about",function(){
+                          alert("AB init");
+                      });
+                  </script>        -->     
+                  
+         
+    </body>
+</html>
